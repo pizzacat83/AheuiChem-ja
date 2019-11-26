@@ -12,7 +12,7 @@ module.exports = function(grunt) {
         banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n',
         sourceMap: true,
         mangle: {
-          sort: true,
+          // sort: true, // disabled since grunt-contrib-uglify v0.2.1
           toplevel: true,
           eval: true
         }
