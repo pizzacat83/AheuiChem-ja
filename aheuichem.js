@@ -124,7 +124,7 @@ var Interpreter = require('./interpreter');
 var UtilityKeyBinding = [
   [
     {
-      name: "복사",
+      name: "Copy",
       exec: function() {
         // TODO yes, yes. I know. This code is like a 30 days old spaghetti
         // in the garbage can that smells like rotten ActiveX.
@@ -137,7 +137,7 @@ var UtilityKeyBinding = [
       }
     },
     {
-      name: "자르기",
+      name: "Cut",
       exec: function() {
         this.clipboard = {
           command: this.tile.command,
@@ -153,14 +153,14 @@ var UtilityKeyBinding = [
       }
     },
     {
-      name: "붙이기",
+      name: "Paste",
       exec: function() {
         this.undomachine.run(new TileAction(this.tile, this.tileX, this.tileY,
           this.clipboard, this.renderer));
       }
     },
     {
-      name: "중단점",
+      name: "Breakpoint",
       exec: function() {
         this.undomachine.run(new TileAction(this.tile, this.tileX, this.tileY,
           {
@@ -1147,27 +1147,27 @@ var Table = require('./table');
 var LayerToggleBinding = [
   [
     {
-      name: '청소',
+      name: '掃除',
       data: 'clean'
     },
     {
-      name: '명령',
+      name: '命令',
       data: 'command'
     },
     {
-      name: '방향',
+      name: '矢印',
       data: 'arrow'
     },
     {
-      name: '경로',
+      name: '経路',
       data: 'path',
     },
     {
-      name: '글자',
+      name: '文字',
       data: 'text'
     },
     {
-      name: '배경',
+      name: '背景',
       data: 'highlight'
     }
   ]
