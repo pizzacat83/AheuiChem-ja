@@ -9,7 +9,7 @@ var Interpreter = require('./interpreter');
 var UtilityKeyBinding = [
   [
     {
-      name: "복사",
+      name: "Copy",
       exec: function() {
         // TODO yes, yes. I know. This code is like a 30 days old spaghetti
         // in the garbage can that smells like rotten ActiveX.
@@ -22,7 +22,7 @@ var UtilityKeyBinding = [
       }
     },
     {
-      name: "자르기",
+      name: "Cut",
       exec: function() {
         this.clipboard = {
           command: this.tile.command,
@@ -38,14 +38,14 @@ var UtilityKeyBinding = [
       }
     },
     {
-      name: "붙이기",
+      name: "Paste",
       exec: function() {
         this.undomachine.run(new TileAction(this.tile, this.tileX, this.tileY,
           this.clipboard, this.renderer));
       }
     },
     {
-      name: "중단점",
+      name: "Breakpoint",
       exec: function() {
         this.undomachine.run(new TileAction(this.tile, this.tileX, this.tileY,
           {

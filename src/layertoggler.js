@@ -4,27 +4,27 @@ var Table = require('./table');
 var LayerToggleBinding = [
   [
     {
-      name: '청소',
+      name: '掃除',
       data: 'clean'
     },
     {
-      name: '명령',
+      name: '命令',
       data: 'command'
     },
     {
-      name: '방향',
+      name: '矢印',
       data: 'arrow'
     },
     {
-      name: '경로',
+      name: '経路',
       data: 'path',
     },
     {
-      name: '글자',
+      name: '文字',
       data: 'text'
     },
     {
-      name: '배경',
+      name: '背景',
       data: 'highlight'
     }
   ]
